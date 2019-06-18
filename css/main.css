@@ -1,0 +1,129 @@
+body {
+    background-color: #000;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+}
+
+.wrapper .block-1 {
+    display: flex;
+    width: 100%;
+    height: 117vh;
+}
+
+.block-1 .col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.block-1 .col-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.block-1 .col-2 .arrow_soc {
+    flex-grow: 1;
+}
+
+.block-1 .col-2 .header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: url("../images/dotted-texture.svg") no-repeat 100% 0, url("../images/bg-1.jpg");
+    -webkit-background-size: 30%, cover;
+    background-size: 30%, cover;
+    padding-bottom: 10em;
+}
+
+.block-1 .col-1 .co {
+    width: 6.325em;
+    height: 1.4em;
+    transform: rotate(-90deg);
+    margin-bottom: 10em;
+}
+
+.block-1 .col-1 .hamburger img {
+    padding: 2.6em;
+}
+
+.block-1 .col-1 .co p {
+    white-space: nowrap;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 6.73em;
+}
+
+.nav .logo {
+    margin-left: 9.5em;
+    flex-grow: 1;
+}
+
+.nav .menu {
+    margin-right: 8em;
+}
+
+.nav .menu a {
+    color: rgba(255, 255, 255, 0.62);
+    font-weight: 600;
+    padding-bottom: 0.4em;
+}
+
+.nav .menu a:hover {
+    border-bottom: 0.15em solid
+    rgba(255, 203, 5, 0.8);
+}
+
+.nav .menu a:not(:last-of-type) {
+    margin-right: 1.5em;
+}
+
+.header .banner {
+    padding-left: 9.5em;
+    margin-top: 14em;
+}
+
+.header .banner h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+}
+
+.header .banner a {
+    font-size: 0.9em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.75em 2.875em;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 3px;
+    border-image-source: linear-gradient(to top, #d2a206, #e27e20);
+    border-image-slice: 1;
+    color: #FFFFFF;
+}
+
+.arrow_soc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow_soc .arrow {
+    margin-left: 45%;
+}
+
+.arrow_soc .social {
+    margin-left: auto;
+    margin-right: 8em;
+}
+
+.arrow_soc .social a:not(:last-of-type) {
+    margin-right: 1.25em;
+}
