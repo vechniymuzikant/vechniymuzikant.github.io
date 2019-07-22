@@ -202,6 +202,12 @@ main .form .input-area .select {
     padding: 0.625em 0.625em;
     border-radius: 3px;
     border: solid 1px #dbdbdb;
+    transition: all 0.2s;
+}
+
+.contact .box .btn a:hover {
+    background-color: #658CD3;
+    color: #fff;
 }
 
 footer {
