@@ -1,0 +1,11 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '*.html, *.css' --directory --port 7777"
+  },
+  "author": "",
+  "license": "ISC"
+}
