@@ -300,6 +300,10 @@ footer .btn a{
         flex: 1;
     }
 
+    .choice-area {
+        max-height: 185px;
+    }
+
     .contact .box2 {
         flex: 1 1 400px;
         margin-top: 1em;
