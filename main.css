@@ -276,18 +276,30 @@ footer .btn a{
     }
 
     .contact .box2 {
-        margin-right: 0;
         flex: 1 1 400px;
+        margin-top: 1em;
     }
 
     .contact .box2 .time {
-        margin-right: auto;
+        order: 2;
+        margin-left: auto;
     }
 
     footer .content {
         flex-wrap: wrap;
         padding-bottom: 2em;
     }
+
+    footer .content .select-btn {
+        flex: 1 1 400px;
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    footer .content .select-btn select {
+        width: 100%;
+        background: url('Line.svg') no-repeat 96% 46%;
+    }    
 
     footer .content .btn {
         flex: 1 1 400px;
