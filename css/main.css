@@ -307,6 +307,7 @@ main .content .post .btn a {
 
     header .box-2 {
         display: none;
+        transition: all 0.5s;
     }
 
     header .box-2 .nav {
