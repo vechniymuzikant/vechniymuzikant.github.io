@@ -252,6 +252,28 @@ main .content .post .btn a {
     border-radius: 5px;
 }
 
+/*
+ *  STYLE 4
+ */
+
+ #style-4::-webkit-scrollbar-track
+ {
+     background-color:rgba(44,83,100,1);
+ }
+ 
+ #style-4::-webkit-scrollbar
+ {
+     width: 10px;
+     background-color: #F5F5F5;
+ }
+ 
+ #style-4::-webkit-scrollbar-thumb
+ {
+     background-color: rgba(0,0,0,0.3);
+ }
+ 
+
+
 @media screen and (max-width: 1024px) {
     header .nav {
         padding: 2em 0;
