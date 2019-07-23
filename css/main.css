@@ -83,6 +83,18 @@ header .title h1 {
     letter-spacing: 0.3em;
 }
 
+header .burger {
+    display: none;
+}
+
+header .burger a {
+    display: block;
+}
+
+header .burger img {
+    width: 2.5em;
+}
+
 header .nav {
     display: flex;
     align-items: center;
@@ -273,6 +285,46 @@ main .content .post .btn a {
   }
 
 @media screen and (max-width: 768px) {
+    header .box-1 {
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    header .burger {
+        display: block;
+    }
+
+    header .box-1 .title {
+        display: none;
+    }
+
+    header .box-1 .logo {
+        padding-right: 0;
+    }
+
+    header .box-2 {
+        display: none;
+    }
+
+    header .box-2 .nav {
+        width: 100%;
+        padding: 0;
+    }
+    
+    header .box-2 ul{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .box-2 ul li {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    header .box-2 ul li a {
+        text-align: center;
+        padding: 1em 0;
+    }
 
     main .content .list > .post {
         flex-basis: 100%;
