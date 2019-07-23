@@ -287,15 +287,18 @@ main .content .post .btn a {
 @media screen and (max-width: 768px) {
     header .box-1 {
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
     
     header .burger {
         display: block;
+        position: absolute;
+        right: 1em;
     }
 
     header .box-1 .title {
         display: none;
+
     }
 
     header .box-1 .logo {
