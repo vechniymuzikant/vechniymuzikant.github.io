@@ -38,7 +38,6 @@ body > .container {
     justify-content: center;
     width: 100%;
 }
-
 .container header {
     background-color: rgba(0, 0, 0, 0.34);
 }
@@ -138,8 +137,8 @@ main .content .list > .post {
     background-color: #eaeaea;
 }
 
-main .content .list > .post:not(:nth-child(3n+1)) {
-    margin-left: auto;
+main .content .list > .post:not(:last-of-type) {
+    margin-right: 2.7vw;
 }
 
 main .content .post .time {
@@ -302,6 +301,9 @@ main .content .post .btn a {
     
     main .content .list > .post {
         margin-left: auto;
+    }
+    main .content .list > .post:not(:last-of-type) {
+        margin-right: 0;
     }
   }
 
