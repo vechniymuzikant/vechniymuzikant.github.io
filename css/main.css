@@ -137,9 +137,10 @@ main .content .list > .post {
     background-color: #eaeaea;
 }
 
-main .content .list > .post:not(:last-of-type) {
-    margin-right: 2.7vw;
+main .content .list > .post:not(:nth-child(3n)) {
+    margin-right: 3.7vw;
 }
+
 
 main .content .post .time {
     padding: 1em;
