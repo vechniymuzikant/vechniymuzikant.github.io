@@ -1,3 +1,5 @@
+/* задаю головні параметри + reset */
+
 :root {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -26,6 +28,8 @@ body {
     background: linear-gradient(to right, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 53%, rgba(44,83,100,1) 100%);
 }
 
+/* розмітка головних блоків */
+
 body > .container {
     width: 100%;
     display: flex;
@@ -38,6 +42,11 @@ body > .container {
     justify-content: center;
     width: 100%;
 }
+
+/* end */
+
+/* розмітка шапки */
+
 .container header {
     background-color: rgba(0, 0, 0, 0.34);
 }
@@ -111,6 +120,10 @@ header .nav li a {
     color: white;
     font-size: 1.5em;
 }
+
+/* end */
+
+/* розмітка головної частини */
 
 main {
     display: flex;
@@ -248,27 +261,28 @@ main .content .post .btn a {
     border-radius: 5px;
 }
 
-/*
- *  STYLE 4
- */
+/* end */
 
- #style-4::-webkit-scrollbar-track
- {
+/* стилізація скролл-бару */
+
+#style-4::-webkit-scrollbar-track {
      background-color:rgba(44,83,100,1);
- }
+}
  
- #style-4::-webkit-scrollbar
- {
+#style-4::-webkit-scrollbar {
      width: 10px;
      background-color: #F5F5F5;
- }
+}
  
- #style-4::-webkit-scrollbar-thumb
- {
+#style-4::-webkit-scrollbar-thumb {
      background-color: rgba(0,0,0,0.3);
- }
+}
  
+/* end */
 
+/* медіазапити */
+
+    /* для планшетів */
 
 @media screen and (max-width: 1024px) {
     header .nav {
@@ -298,6 +312,9 @@ main .content .post .btn a {
     }
     
   }
+  /* end */
+
+  /* для мобільниї пристроїв */
 
 @media screen and (max-width: 768px) {
     header .box-1 {
@@ -350,3 +367,5 @@ main .content .post .btn a {
         -ms-grid-columns: 1fr;
     }
 }
+
+    /* end */
