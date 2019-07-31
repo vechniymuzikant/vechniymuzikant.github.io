@@ -325,6 +325,14 @@ nav .content .soc li a:hover {
         text-align: center;
     }
 
+    main .about-us {
+        width: 85vw;
+    }
+
+    nav .content .soc {
+        padding-left: 0;
+    }
+
     nav .content .soc ul {
         justify-content: space-around;
     }
