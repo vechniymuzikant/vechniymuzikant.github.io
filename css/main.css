@@ -246,6 +246,7 @@ nav .content ul.list li {
 
 nav .content ul.list li:hover {
     background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
 }
 
 
@@ -287,7 +288,8 @@ nav .content .soc li a img {
 }
 
 nav .content .soc li a:hover {
-    background-color:rgba(255, 255, 255, 0.53);
+    background-color:rgba(5, 1, 1, 0.53);
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 1200px) {
