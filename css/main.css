@@ -307,11 +307,30 @@ nav .content .soc li a:hover {
     .wrapper > nav > * {
         margin: 0 auto;
     }
+    header {
+        position: static;
+    }
+
+    main {
+        padding-top: 0;
+    }
+    .wrapper > nav {
+        position: absolute;
+        top: 10em;
+    }
+
+    body .wrapper > nav.active {
+        display: block;
+        border-radius: 0;
+    }
   }
 
 @media screen and (max-width: 600px) {
     header .text {
         display: none;
+    }
+    .wrapper > nav {
+        position: static;
     }
     header .logo {
         padding-left: 35%;
@@ -320,10 +339,6 @@ nav .content .soc li a:hover {
         position: static;
         display: none;
         border-radius: 0;
-    }
-
-    body .wrapper > nav.active {
-        display: block;
     }
 
     .motto {

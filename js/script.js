@@ -14,5 +14,9 @@ btn.onclick = function() {
 
 window.onscroll = function () {  
     var element = document.querySelector('nav');
-    element.classList.remove('active');
+    if(window.screen.availWidth > 1200)
+    {
+        element.classList.remove('active');
+    }
+    
 }; 
