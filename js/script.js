@@ -1,15 +1,13 @@
-let toggleNavStatus = false;
+var btn = document.querySelector('.hamburger')
 
-let toggleNav = function () {
-    let get = document.querySelector(".box-2");
-    if (toggleNavStatus === false) {
-        get.style.display="flex";
-        toggleNavStatus = true;
+btn.onclick = function() {
+    var element = document.querySelector('nav');
+    console.log(element.classList.length);
+    if(element.classList.length > 0)
+    {
+        element.classList.remove('active');
     }
-
-    else if (toggleNavStatus === true) {
-        get.style.display="none";
-        toggleNavStatus = false;
+    else {
+        element.classList.add('active');
     }
-
 };

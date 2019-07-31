@@ -1,371 +1,335 @@
-/* задаю головні параметри + reset */
-
 :root {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    color: white;
+    font-size: 1em;
+    overflow-x: hidden;
 }
 
 *,
-::before,
-::after {
+::after,
+::before {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-    border: none;
-    outline: 0;
+    outline: none;
     text-decoration: none;
+    color: white;
     list-style: none;
 }
 
-body {
-    background: rgba(15,32,39,1);
-    background: -moz-linear-gradient(left, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 53%, rgba(44,83,100,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(15,32,39,1)), color-stop(53%, rgba(32,58,67,1)), color-stop(100%, rgba(44,83,100,1)));
-    background: -webkit-linear-gradient(left, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 53%, rgba(44,83,100,1) 100%);
-    background: -o-linear-gradient(left, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 53%, rgba(44,83,100,1) 100%);
-    background: -ms-linear-gradient(left, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 53%, rgba(44,83,100,1) 100%);
-    background: linear-gradient(to right, rgba(15,32,39,1) 0%, rgba(32,58,67,1) 53%, rgba(44,83,100,1) 100%);
-}
-
-/* розмітка головних блоків */
-
-body > .container {
-    width: 100%;
+.wrapper {
     display: flex;
     flex-direction: column;
-    padding-bottom: 6em;
 }
 
-.container > * {
+.wrapper > * {
     display: flex;
     justify-content: center;
-    width: 100%;
+    z-index: 1;
 }
 
-/* end */
-
-/* розмітка шапки */
-
-.container header {
-    background-color: rgba(0, 0, 0, 0.34);
-}
-
-.container header .content {
-    width: 95vw;
+.wrapper > * > * {
     display: flex;
 }
 
-header .box {
-    display: flex;
+header {
+    background-color: #00D2D1;
 }
 
-header .box-1 {
-    margin-right: auto;
-}
-
-header .logo {
-    padding: 2em 0;
-    padding-right: 2em;
-}
-
-header .logo a{
-    font-size: 3em;
-    color: inherit;
-    font-weight: 700;
-}
-
-header .logo a span {
-    color: #36D058;
-}
-
-header .title {
-    display: flex;
+header > * {
+    width: calc(100vw - 4em);
     align-items: center;
-}
-
-header .title h1 {
-    font-size: 1.5em;
-    font-weight: 300;
-    letter-spacing: 0.3em;
-}
-
-header .burger {
-    display: none;
-}
-
-header .burger a {
-    display: block;
-}
-
-header .burger img {
-    width: 2.5em;
-}
-
-header .nav {
-    display: flex;
-    align-items: center;
-}
-
-header .nav ul {
-    display: flex;
-}
-
-header .nav li + li {
-    margin-left: 2em;
-}
-
-header .nav li a {
-    display: block;
-    color: white;
-    font-size: 1.5em;
-}
-
-/* end */
-
-/* розмітка головної частини */
-
-main {
-    display: flex;
-    margin-top: 5em;
     justify-content: center;
+    position: relative;
 }
 
-main .content {
-    width: 82%;
+header .hamburger {
+    position: absolute;
+    z-index: 12;
+    left: 0;
 }
 
-main .content > .list {
-    display: grid;
-    grid-gap: 3em;
-    grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-columns: 1fr 1fr 1fr;
-
-}
-
-main .content .list > .post {
+header .hamburger .body {
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
-    background-color: #eaeaea;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 4em;
+    height: 4em;
+    border: 3px solid white;
+    border-radius:  50%;
+    transition: all 0.2s;
+    cursor: pointer;
 }
 
-
-main .content .post .time {
-    padding: 1em;
-    margin-left: auto;
-    color: #777777;
+header .hamburger .body:hover {
+    background-color: #00C0BF;
+    border: 3px solid #00C0BF;
+    transform: rotate(180deg);
 }
 
-main .content .post .box {
-    width: 86%;
-    margin: 0 auto;
-    padding-top: 1em;
-}
-
-main .content .post .image img {
-    display: block;
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border: solid 1px #777777;
-}
-
-main .content .post .title {
-    padding-top: 1em;
-    color: #3d3d3d;
-}
-
-main .content .post .title h2 {
-    font-size: 1.5em;
-}
-
-main .content .post .description {
-    padding-top: 1em;
-}
-
-main .content .post .description p {
-    line-height: 1.5;
-    letter-spacing: normal;
-    color: #000000;
-    font-size: 1em;
-}
-
-main .content .post .box-in-need {
-    padding-top: 1em;
-    color: #3d3d3d;
-}
-
-main .content .post .box-in-need .text > p {
-    font-size: 1em;
-    font-weight: 700;
-}
-
-main .content .post .box-in-need li {
-    line-height: 1.5;
-}
-
-main .content .post .box-in-need li a {
-    text-decoration: underline;
-}
-
-main .content .post .box-finished {
-    padding: 1em 0;
-}
-
-main .content .post .box-finished .fund {
-    color: #3d3d3d;
-    font-style: italic;
-}
-
-main .content .post .box-finished .fund p {
-    display: inline;
-    font-weight: 700;
-    font-style: normal;
-}
-
-main .content .post .box-finished .fund span.x {
-    font-weight: 700;
-    color: linear-gradient(90deg, #B92B27 1.09%, #1565C0 100%);
-}
-
-main .content .post .box-finished .progress-line-out {
-    width: 100%;
-    height: 0.5em;
-    margin: 1em 0;
-    margin-bottom: 2em;
+header .hamburger .body .strip {
+    width: 2em;
+    height: 0.2em;
     background-color: #fff;
     border-radius: 50px;
 }
-
-main .content .post .box-finished .progress-line-out > * {
-    width: 50%; /*you can change this number*/
-    height: 0.5em;
-    background-color: #777777;
-    border-radius: 50px;
+header .hamburger .body .strip.small {
+    width: 1.5625em;
 }
 
-main .content .post .btn {
-    padding-bottom: 1em;
+.small.top {
+    margin-top: 17px;
 }
 
-main .content .post .btn a {
+.small.bottom {
+    margin-bottom: 17px;
+}
+
+header .main-title {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    color: #fff;
-    font-size: 1.5em;
+    align-items: center;
+    padding: 2em 0;
+}
+
+header .main-title .logo {
+    margin-right: 2em;
+}
+
+header .main-title .logo img {
+    width: 7em;
+}
+
+header .main-title *.title {
+    font-family: 'Merriweather', serif;
+    font-style: normal;
     font-weight: 700;
-    background-color: #58c3b9;
-    padding: 0.8125em 0;
-    border-radius: 5px;
+    font-size: 2.25rem;
+    letter-spacing: 0.265em;
 }
 
-/* end */
+header .main-title *.meaning {
+    margin-top: 0.2em;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
 
-/* стилізація скролл-бару */
-
-#style-4::-webkit-scrollbar-track {
-     background-color:rgba(44,83,100,1);
 }
- 
-#style-4::-webkit-scrollbar {
-     width: 10px;
-     background-color: #F5F5F5;
+
+main .content {
+    flex-direction: column;
 }
- 
-#style-4::-webkit-scrollbar-thumb {
-     background-color: rgba(0,0,0,0.3);
+
+main .aside {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    background:linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ), url('/assets/bg.png') no-repeat;
+    background-size: cover;
+    padding: 9.375em 0;
 }
- 
-/* end */
 
-/* медіазапити */
+main .aside .text .motto{
+    font-family: 'Merriweather', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.25rem;
 
-    /* для планшетів */
+}
 
-@media screen and (max-width: 1024px) {
-    header .nav {
-        padding: 2em 0;
-    }
-    header .box {
-        margin-right: 0;
-        justify-content: center;
-    } 
-    header .content {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+main .aside .text .description {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.125rem;
+    color: #000;
+}
 
-    header .box-1 {
-        flex-basis: 300px;
-        flex: 1;
-    }
+main .about-us {
+    width: 70vw;
+    margin: 0 auto;
+    padding: 4em 0;
+    padding-bottom: 7.25em;
+    display: flex;
+    flex-direction: column;
+}
 
-    header .box-2 {
-        flex-basis: 1000px;
-    }
+main .about-us .title {
+    align-self: center;
+    padding-bottom: 4em;
+}
 
-    main .content > .list {
-        grid-template-columns: 1fr 1fr;
-        -ms-grid-columns: 1fr 1fr;
-    }
+main .about-us .title h1 {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #028786;
+}
+
+main .about-us .text p {
+    text-indent: 2em;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+main .about-us p, main .about-us h1 {
+    color: #333333;
+}
+
+footer {
+    width: 100%;
+    background: linear-gradient(90.2deg, #08E1E0 -3.21%, #028786 99.57%);
+}
+
+footer > * {
+    width: calc(100vw - 4em);
+}
+
+footer .content .logo img {
+    width: 5.375em;
+    padding: 2.6875em 0;
+}
+
+.wrapper > nav {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: 11;
+    top: 10em;
+    width: 28vw;
+    background-color: #00c0bf;
+    border-radius: 0 0 30px 0
+}
+
+.wrapper > nav.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+nav .content {
+    width: calc(100% - 4em);
+    flex-direction: column;
+}
+
+nav .content .title {
+    padding: 2em 0;
+}
+
+nav .content .title h2 {
+    font-family: Merriweather;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+}
+
+nav .content ul.list {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+
+nav .content ul.list li {
+    border-radius: 20px;
+    transition: all, 0.1s;
+}
+
+nav .content ul.list li:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+nav .content ul.list li a {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5em;
+    padding: 1rem 2rem;
+}
+
+nav .content .soc {
+    display: block;
+    padding-left: 2em;
+}
+
+nav .content .soc ul {
+    display: flex;
+    padding-bottom: 2em;
+}
+
+nav .content .soc li {
+    margin-right: 1em;
+}
+
+nav .content .soc li a{
+    display: inline-flex;
+    height: 4em;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    box-sizing: border-box;
     
-  }
-  /* end */
 
-  /* для мобільниї пристроїв */
+}
+nav .content .soc li a img {
+    padding: 1em;
+}
 
-@media screen and (max-width: 768px) {
-    header .box-1 {
-        align-items: center;
-        justify-content: center;
-    }
-    
-    header .burger {
+nav .content .soc li a:hover {
+    background-color:rgba(255, 255, 255, 0.53);
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper > nav {
+        width: 100vw;
         display: block;
-        position: absolute;
-        right: 1em;
     }
+    .wrapper > nav > * {
+        margin: 0 auto;
+    }
+  }
 
-    header .box-1 .title {
+@media screen and (max-width: 600px) {
+    header .text {
         display: none;
-
     }
-
-    header .box-1 .logo {
-        padding-right: 0;
+    header .logo {
+        padding-left: 35%;
     }
-
-    header .box-2 {
+    body .wrapper > nav {
+        position: static;
         display: none;
-        transition: all 0.5s;
+        border-radius: 0;
     }
 
-    header .box-2 .nav {
-        width: 100%;
-        padding: 0;
-    }
-    
-    header .box-2 ul{
-        flex-direction: column;
-        width: 100%;
+    body .wrapper > nav.active {
+        display: block;
     }
 
-    header .box-2 ul li {
-        margin-left: 0;
-        padding: 0;
+    .motto {
+        line-height: 150%;
     }
 
-    header .box-2 ul li a {
+    .motto, .description, .about-us .title {
         text-align: center;
-        padding: 1em 0;
     }
 
-    main .content > .list {
-        grid-template-columns: 1fr;
-        -ms-grid-columns: 1fr;
+    nav .content .soc ul {
+        justify-content: space-around;
+    }
+
+    nav .content .soc li {
+        margin-right: 0;
     }
 }
-
-    /* end */
