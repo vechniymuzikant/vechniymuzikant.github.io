@@ -12,11 +12,12 @@ btn.onclick = function() {
     }
 };
 
-window.onscroll = function () {  
+window.addEventListener("scroll", function (event) {
+    var scroll = this.scrollY;
     var element = document.querySelector('nav');
     if(window.screen.availWidth > 1200)
     {
         element.classList.remove('active');
     }
-    
-}; 
+});
+
