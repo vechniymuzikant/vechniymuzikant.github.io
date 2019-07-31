@@ -18,13 +18,14 @@
 
 .wrapper {
     display: flex;
+    position: relative;
     flex-direction: column;
+    z-index: 0;
 }
 
 .wrapper > * {
     display: flex;
     justify-content: center;
-    z-index: 1;
 }
 
 .wrapper > * > * {
@@ -33,6 +34,9 @@
 
 header {
     background-color: #00D2D1;
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
 }
 
 header > * {
@@ -115,6 +119,10 @@ header .main-title *.meaning {
     font-weight: 300;
     font-size: 1rem;
 
+}
+
+main {
+    padding-top: 10em;
 }
 
 main .content {
@@ -202,7 +210,7 @@ footer .content .logo img {
     transform: translateX(-100%);
     opacity: 0;
     transition: all 0.5s;
-    position: absolute;
+    position: fixed;
     z-index: 11;
     top: 10em;
     width: 28vw;
@@ -288,7 +296,6 @@ nav .content .soc li a img {
 }
 
 nav .content .soc li a:hover {
-    background-color:rgba(5, 1, 1, 0.53);
     transform: scale(1.1);
 }
 

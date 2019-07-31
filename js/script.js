@@ -11,3 +11,8 @@ btn.onclick = function() {
         element.classList.add('active');
     }
 };
+
+window.onscroll = function () {  
+    var element = document.querySelector('nav');
+    element.classList.remove('active');
+}; 
