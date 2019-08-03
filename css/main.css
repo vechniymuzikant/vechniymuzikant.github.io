@@ -34,6 +34,9 @@
   color: white;
   list-style: none; }
 
+html {
+  scroll-behavior: smooth; }
+
 .wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -457,4 +460,9 @@ nav .content {
     main .about-us .text ul.members li .card {
       margin-left: 0;
       margin-top: 1em;
-      width: 100%; } }
+      width: 100%; }
+      main .about-us .text ul.members li .card h3 {
+        text-align: center; }
+      main .about-us .text ul.members li .card p {
+        padding: 1em;
+        text-align: center; } }
