@@ -272,8 +272,8 @@ main {
         main .about-us .text ul.members li:not(:first-of-type) {
           margin-top: 2em; }
         main .about-us .text ul.members li img {
-          width: 15rem;
-          height: 15rem;
+          width: 10em;
+          height: 10em;
           -o-object-fit: cover;
              object-fit: cover; }
         main .about-us .text ul.members li .card {
@@ -425,4 +425,19 @@ nav .content {
           -ms-flex-pack: distribute;
               justify-content: space-around; }
     nav .content .soc li {
-      margin-right: 0; } }
+      margin-right: 0; }
+  main .about-us .text h2 {
+    font-size: 1.5em; }
+  main .about-us .text ul.members li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    main .about-us .text ul.members li img {
+      width: 100%;
+      height: 100%; }
+    main .about-us .text ul.members li .card {
+      margin-left: 0;
+      margin-top: 1em;
+      width: 100%; } }
