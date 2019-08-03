@@ -358,7 +358,7 @@ nav .content {
       -webkit-transition: all, 0.1s;
       -o-transition: all, 0.1s;
       transition: all, 0.1s; }
-      nav .content ul.list li:hover {
+      nav .content ul.list li:hover:focused {
         background-color: rgba(255, 255, 255, 0.3);
         -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
