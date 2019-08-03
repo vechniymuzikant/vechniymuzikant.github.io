@@ -12,7 +12,7 @@ btn.onclick = function() {
     }
 };
 
-window.addEventListener("scroll", function (event) {
+window.addEventListener("scroll", function () {
     var scroll = this.scrollY;
     var element = document.querySelector('nav');
     if(window.screen.availWidth > 1200)
