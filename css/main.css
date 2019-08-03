@@ -276,7 +276,16 @@ main {
         -webkit-box-align: center;
         -webkit-align-items: center;
             -ms-flex-align: center;
-                align-items: center; }
+                align-items: center;
+        -webkit-transition: all, 0.5s;
+        -o-transition: all, 0.5s;
+        transition: all, 0.5s; }
+        main .about-us .text ul.members li:hover {
+          -webkit-box-shadow: 0 0 10px rgba(68, 68, 68, 0.3);
+                  box-shadow: 0 0 10px rgba(68, 68, 68, 0.3);
+          -webkit-transform: scale(1.05);
+              -ms-transform: scale(1.05);
+                  transform: scale(1.05); }
         main .about-us .text ul.members li:not(:first-of-type) {
           margin-top: 2em; }
         main .about-us .text ul.members li img {
