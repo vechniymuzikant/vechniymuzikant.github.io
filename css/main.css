@@ -137,6 +137,12 @@ header {
         -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
                 transform: rotate(180deg); }
+      header .hamburger .body:focused {
+        background-color: #00C0BF;
+        border: 3px solid #00C0BF;
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg); }
       header .hamburger .body .strip {
         width: 2em;
         height: 0.2em;
@@ -358,7 +364,7 @@ nav .content {
       -webkit-transition: all, 0.1s;
       -o-transition: all, 0.1s;
       transition: all, 0.1s; }
-      nav .content ul.list li:hover:focused {
+      nav .content ul.list li:hover {
         background-color: rgba(255, 255, 255, 0.3);
         -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
@@ -403,6 +409,10 @@ nav .content {
                   transform: scale(1.1); }
 
 @media screen and (max-width: 1200px) {
+  header {
+    position: static; }
+  main {
+    padding-top: 0; }
   .wrapper > nav {
     width: 100vw;
     display: block;
@@ -410,10 +420,6 @@ nav .content {
     top: 10em; }
     .wrapper > nav > * {
       margin: 0 auto; }
-  header {
-    position: static; }
-  main {
-    padding-top: 0; }
   body .wrapper > nav.active {
     display: block;
     border-radius: 0; } }
