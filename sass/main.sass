@@ -1,406 +1,449 @@
-$color_1: white
-$color_2: #000
-$color_3: #028786
-$color_4: #333333
-$font_family_1: 'Merriweather', serif
-$font_family_2: 'Roboto', sans-serif
-$font_family_3: Merriweather
-$font_family_4: 'Roboto'
-$background_color_1: #00D2D1
-$background_color_2: #00C0BF
-$background_color_3: #fff
-$background_color_4: #00c0bf
-$background_color_5: rgba(255, 255, 255, 0.3)
+\:root
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  font-size: 1em
+  overflow-x: hidden
 
-\:root 
-	box-sizing: border-box
-	font-size: 1em
-	overflow-x: hidden
+*, ::after, ::before
+  -webkit-box-sizing: inherit
+  box-sizing: inherit
+  margin: 0
+  padding: 0
+  outline: none
+  text-decoration: none
+  color: white
+  list-style: none
 
-* 
-	box-sizing: inherit
-	margin: 0
-	padding: 0
-	outline: none
-	text-decoration: none
-	color: $color_1
-	list-style: none
+html
+  scroll-behavior: smooth
 
-::after 
-	box-sizing: inherit
-	margin: 0
-	padding: 0
-	outline: none
-	text-decoration: none
-	color: $color_1
-	list-style: none
+.wrapper
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  position: relative
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -webkit-flex-direction: column
+  -ms-flex-direction: column
+  flex-direction: column
+  z-index: 0
+  >
+    *
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-pack: center
+      -webkit-justify-content: center
+      -ms-flex-pack: center
+      justify-content: center
+      > *
+        display: -webkit-box
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+    nav
+      -webkit-transform: translateX(-100%)
+      -ms-transform: translateX(-100%)
+      transform: translateX(-100%)
+      opacity: 0
+      -webkit-transition: all 0.5s
+      -o-transition: all 0.5s
+      transition: all 0.5s
+      position: fixed
+      z-index: 11
+      top: 10em
+      width: 28vw
+      background-color: #00c0bf
+      border-radius: 0 0 30px 0
+      &.active
+        -webkit-transform: translateX(0)
+        -ms-transform: translateX(0)
+        transform: translateX(0)
+        opacity: 1
 
-::before 
-	box-sizing: inherit
-	margin: 0
-	padding: 0
-	outline: none
-	text-decoration: none
-	color: $color_1
-	list-style: none
+header
+  background-color: #00D2D1
+  z-index: 9999
+  position: fixed
+  width: 100vw
+  > *
+    width: -webkit-calc(100vw - 4em)
+    width: calc(100vw - 4em)
+    -webkit-box-align: center
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-box-pack: center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+    position: relative
+  .hamburger
+    position: absolute
+    z-index: 12
+    left: 0
+    .body
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -webkit-flex-direction: column
+      -ms-flex-direction: column
+      flex-direction: column
+      position: relative
+      -webkit-box-pack: justify
+      -webkit-justify-content: space-between
+      -ms-flex-pack: justify
+      justify-content: space-between
+      -webkit-box-align: center
+      -webkit-align-items: center
+      -ms-flex-align: center
+      align-items: center
+      width: 4em
+      height: 4em
+      border: 3px solid white
+      border-radius: 50%
+      -webkit-transition: all 0.2s
+      -o-transition: all 0.2s
+      transition: all 0.2s
+      cursor: pointer
+      &:hover
+        background-color: #00C0BF
+        border: 3px solid #00C0BF
+        -webkit-transform: rotate(180deg)
+        -ms-transform: rotate(180deg)
+        transform: rotate(180deg)
+      .strip
+        width: 2em
+        height: 0.2em
+        background-color: #fff
+        border-radius: 50px
+        &.small
+          width: 1.5625em
+  .main-title
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+    padding: 2em 0
+    .logo
+      margin-right: 2em
+      img
+        width: 7em
+    *
+      &.title
+        font-family: "Merriweather", serif
+        font-style: normal
+        font-weight: 700
+        font-size: 2.25rem
+        letter-spacing: 0.265em
+      &.meaning
+        margin-top: 0.2em
+        font-family: "Roboto", sans-serif
+        font-style: normal
+        font-weight: 300
+        font-size: 1rem
 
-.wrapper 
-	display: flex
-	position: relative
-	flex-direction: column
-	z-index: 0
-	>* 
-		display: flex
-		justify-content: center
-		>* 
-			display: flex
-		
-	
-	>nav 
-		transform: translateX(-100%)
-		opacity: 0
-		transition: all 0.5s
-		position: fixed
-		z-index: 11
-		top: 10em
-		width: 28vw
-		background-color: $background_color_4
-		border-radius: 0 0 30px 0
-	
-	>nav.active 
-		transform: translateX(0)
-		opacity: 1
-	
+.small
+  &.top
+    margin-top: 17px
+  &.bottom
+    margin-bottom: 17px
 
-header 
-	background-color: $background_color_1
-	z-index: 9999
-	position: fixed
-	width: 100vw
-	>* 
-		width: calc(100vw - 4em)
-		align-items: center
-		justify-content: center
-		position: relative
-	
-	.hamburger 
-		position: absolute
-		z-index: 12
-		left: 0
-		.body 
-			display: flex
-			flex-direction: column
-			position: relative
-			justify-content: space-between
-			align-items: center
-			width: 4em
-			height: 4em
-			border: 3px solid white
-			border-radius: 50%
-			transition: all 0.2s
-			cursor: pointer
-			&:hover 
-				background-color: $background_color_2
-				border: 3px solid #00C0BF
-				transform: rotate(180deg)
-			
-			.strip 
-				width: 2em
-				height: 0.2em
-				background-color: $background_color_3
-				border-radius: 50px
-			
-			.strip.small 
-				width: 1.5625em
-			
-		
-	
-	.main-title 
-		display: flex
-		align-items: center
-		padding: 2em 0
-		.logo 
-			margin-right: 2em
-			img 
-				width: 7em
-			
-		
-		*.title 
-			font-family: $font_family_1
-			font-style: normal
-			font-weight: 700
-			font-size: 2.25rem
-			letter-spacing: 0.265em
-		
-		*.meaning 
-			margin-top: 0.2em
-			font-family: $font_family_2
-			font-style: normal
-			font-weight: 300
-			font-size: 1rem
-		
-	
+main
+  padding-top: 10em
+  .content
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -webkit-flex-direction: column
+    -ms-flex-direction: column
+    flex-direction: column
+  .aside
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    width: 100vw
+    -webkit-box-pack: center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/assets/bg.png") no-repeat
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/bg.png") no-repeat
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/bg.png") no-repeat
+    background-size: cover
+    padding: 9.375em 0
+    .text
+      width: 80%
+      text-align: center
+      .motto
+        font-family: "Merriweather", serif
+        font-style: normal
+        font-weight: 700
+        font-size: 2.25rem
+      .description
+        font-family: "Roboto", sans-serif
+        font-style: italic
+        font-weight: 300
+        font-size: 1.125rem
+        color: #000
+  .about-us
+    width: 70vw
+    margin: 0 auto
+    padding: 4em 0
+    padding-bottom: 7.25em
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -webkit-flex-direction: column
+    -ms-flex-direction: column
+    flex-direction: column
+    .title
+      -webkit-align-self: center
+      -ms-flex-item-align: center
+      align-self: center
+      padding-bottom: 4em
+      h1
+        font-family: Merriweather
+        font-style: normal
+        font-weight: 700
+        font-size: 4rem
+        color: #028786
+    .text
+      .pream
+        margin-bottom: 2em
+        p
+          font-family: "Roboto"
+          font-style: normal
+          font-weight: normal
+          font-size: 1.5rem
+          line-height: 150%
+      h2
+        padding: 1em 0
+        margin-top: 2em
+        text-align: center
+        font-family: Merriweather
+        font-style: normal
+        font-weight: bold
+        font-size: 3rem
+        color: #333333
+        border-top: 2px solid #333333
+        border-bottom: 2px solid #333333
+        &:first-of-type
+          margin-top: 4em
+      ul.members
+        padding: 2em 0
+        display: -webkit-box
+        display: -webkit-flex
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: vertical
+        -webkit-box-direction: normal
+        -webkit-flex-direction: column
+        -ms-flex-direction: column
+        flex-direction: column
+        li
+          display: -webkit-box
+          display: -webkit-flex
+          display: -ms-flexbox
+          display: flex
+          -webkit-box-align: center
+          -webkit-align-items: center
+          -ms-flex-align: center
+          align-items: center
+          -webkit-transition: all, 0.5s
+          -o-transition: all, 0.5s
+          transition: all, 0.5s
+          &:hover
+            -webkit-box-shadow: 0 0 10px rgba(68, 68, 68, 0.3)
+            box-shadow: 0 0 10px rgba(68, 68, 68, 0.3)
+            -webkit-transform: scale(1.05)
+            -ms-transform: scale(1.05)
+            transform: scale(1.05)
+          &:not(:first-of-type)
+            margin-top: 2em
+          img
+            width: 10em
+            height: 10em
+            -o-object-fit: cover
+            object-fit: cover
+          .card
+            width: 60%
+            margin-left: 3em
+            h3
+              font-size: 2em
+              font-family: Merriweather
+              color: #028786
+            p
+              font-size: 1rem
+              margin-top: .3em
+              font-family: "Roboto"
+              font-style: normal
+              font-weight: normal
+    p, h1
+      color: #333333
 
-.small.top 
-	margin-top: 17px
+footer
+  width: 100%
+  background: -o-linear-gradient(359.8deg, #08E1E0 -3.21%, #028786 99.57%)
+  background: linear-gradient(90.2deg, #08E1E0 -3.21%, #028786 99.57%)
+  > *
+    width: -webkit-calc(100vw - 4em)
+    width: calc(100vw - 4em)
+  .content .logo img
+    width: 5.375em
+    padding: 2.6875em 0
 
-.small.bottom 
-	margin-bottom: 17px
+nav .content
+  width: -webkit-calc(100% - 4em)
+  width: calc(100% - 4em)
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -webkit-flex-direction: column
+  -ms-flex-direction: column
+  flex-direction: column
+  .title
+    padding: 2em 0
+    h2
+      font-family: Merriweather
+      font-size: 2rem
+      font-weight: 700
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+  ul.list
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -webkit-flex-direction: column
+    -ms-flex-direction: column
+    flex-direction: column
+    padding-bottom: 2em
+    li
+      border-radius: 20px
+      -webkit-transition: all, 0.1s
+      -o-transition: all, 0.1s
+      transition: all, 0.1s
+      &:hover
+        background-color: rgba(255, 255, 255, 0.3)
+        -webkit-transform: scale(1.1)
+        -ms-transform: scale(1.1)
+        transform: scale(1.1)
+      a
+        font-family: "Roboto", sans-serif
+        display: block
+        font-style: normal
+        font-weight: 300
+        font-size: 1.5em
+        padding: 1rem 2rem
+  .soc
+    display: block
+    padding-left: 2em
+    ul
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      display: flex
+      padding-bottom: 2em
+    li
+      margin-right: 1em
+      a
+        display: -webkit-inline-box
+        display: -webkit-inline-flex
+        display: -ms-inline-flexbox
+        display: inline-flex
+        height: 4em
+        -webkit-box-align: center
+        -webkit-align-items: center
+        -ms-flex-align: center
+        align-items: center
+        background-color: rgba(255, 255, 255, 0.3)
+        border-radius: 50px
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+        img
+          padding: 1em
+        &:hover
+          -webkit-transform: scale(1.1)
+          -ms-transform: scale(1.1)
+          transform: scale(1.1)
 
-main 
-	padding-top: 10em
-	.content 
-		flex-direction: column
-	
-	.aside 
-		display: flex
-		width: 100vw
-		justify-content: center
-		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/assets/bg.png') no-repeat
-		background-size: cover
-		padding: 9.375em 0
-		.text 
-			.motto 
-				font-family: $font_family_1
-				font-style: normal
-				font-weight: 700
-				font-size: 2.25rem
-			
-			.description 
-				font-family: $font_family_2
-				font-style: italic
-				font-weight: 300
-				font-size: 1.125rem
-				color: $color_2
-			
-		
-	
-	.about-us 
-		width: 70vw
-		margin: 0 auto
-		padding: 4em 0
-		padding-bottom: 7.25em
-		display: flex
-		flex-direction: column
-		.title 
-			align-self: center
-			padding-bottom: 4em
-			h1 
-				font-family: $font_family_3
-				font-style: normal
-				font-weight: 700
-				font-size: 4rem
-				color: $color_3
-			
-		
-		.text 
-			.pream
-				margin-bottom: 2em
-				p 
-					font-family: $font_family_4
-					font-style: normal
-					font-weight: normal
-					font-size: 1.5rem
-					line-height: 150%
-			h2
-				padding: 1em 0;
-				text-align: center
-				font-family: $font_family_3
-				font-style: normal
-				font-weight: bold
-				font-size: 3rem
-				color: $color_4
-			ul.members 
-				padding: 2em 0
-				display: flex
-				flex-direction: column
-				li
-					display: flex
-					align-items: center
-					&:not(:first-of-type)
-						margin-top: 2em
-					img
-						width: 15rem
-						height: 15rem
-						object-fit: cover
-					.card
-						width: 60%
-						margin-left: 4em
-						h3
-							font-size: 2em
-							font-family: $font_family_3
-							color: $color_3
-						p
-							font-size: 1rem
-							margin-top: .3em
-							font-family: $font_family_4
-							font-style: normal
-							font-weight: normal
+@media screen and (max-width: 1200px)
+  header
+    position: static
+  main
+    padding-top: 0
+  .wrapper > nav
+    width: 100vw
+    display: block
+    position: absolute
+    top: 10em
+    > *
+      margin: 0 auto
+  body .wrapper > nav.active
+    display: block
+    border-radius: 0
 
-
-
-			
-		
-		p 
-			color: $color_4
-		
-		h1 
-			color: $color_4
-		
-	
-
-footer 
-	width: 100%
-	background: linear-gradient(90.2deg, #08E1E0 -3.21%, #028786 99.57%)
-	>* 
-		width: calc(100vw - 4em)
-	
-	.content 
-		.logo 
-			img 
-				width: 5.375em
-				padding: 2.6875em 0
-			
-		
-	
-
-nav 
-	.content 
-		width: calc(100% - 4em)
-		flex-direction: column
-		.title 
-			padding: 2em 0
-			h2 
-				font-family: $font_family_3
-				font-size: 2rem
-				font-weight: 700
-				font-style: normal
-				font-stretch: normal
-				line-height: normal
-			
-		
-		ul.list 
-			display: flex
-			flex-direction: column
-			padding-bottom: 2em
-			li 
-				border-radius: 20px
-				transition: all, 0.1s
-				&:hover 
-					background-color: $background_color_5
-					transform: scale(1.1)
-				
-				a 
-					font-family: $font_family_2
-					display: block
-					font-style: normal
-					font-weight: 300
-					font-size: 1.5em
-					padding: 1rem 2rem
-				
-			
-		
-		.soc 
-			display: block
-			padding-left: 2em
-			ul 
-				display: flex
-				padding-bottom: 2em
-			
-			li 
-				margin-right: 1em
-				a 
-					display: inline-flex
-					height: 4em
-					align-items: center
-					background-color: $background_color_5
-					border-radius: 50px
-					box-sizing: border-box
-					img 
-						padding: 1em
-					
-					&:hover 
-						transform: scale(1.1)
-					
-				
-			
-		
-	
-
-@media screen and (max-width: 1200px) 
-	.wrapper 
-		>nav 
-			width: 100vw
-			display: block
-			position: absolute
-			top: 10em
-			>* 
-				margin: 0 auto
-			
-		
-	
-	header 
-		position: static
-	
-	main 
-		padding-top: 0
-	
-	body 
-		.wrapper 
-			>nav.active 
-				display: block
-				border-radius: 0
-			
-		
-	
-
-@media screen and (max-width: 600px) 
-	header 
-		.text 
-			display: none
-		
-		.logo 
-			padding-left: 35%
-		
-	
-	.wrapper 
-		>nav 
-			position: static
-		
-	
-	body 
-		.wrapper 
-			>nav 
-				position: static
-				display: none
-				border-radius: 0
-			
-		
-	
-	.motto 
-		line-height: 150%
-		text-align: center
-	
-	.description 
-		text-align: center
-	
-	.about-us 
-		.title 
-			text-align: center
-		
-	
-	main 
-		.about-us 
-			width: 85vw
-		
-	
-	nav 
-		.content 
-			.soc 
-				padding-left: 0
-				ul 
-					justify-content: space-around
-				
-				li 
-					margin-right: 0
-				
+@media screen and (max-width: 600px)
+  header
+    .text
+      display: none
+    .logo
+      padding-left: 35%
+  .wrapper > nav
+    position: static
+  body .wrapper > nav
+    position: static
+    display: none
+    border-radius: 0
+  .motto
+    line-height: 150%
+    text-align: center
+  .description, .about-us .title
+    text-align: center
+  main .about-us
+    width: 85vw
+  nav .content .soc
+    padding-left: 0
+    ul
+      -webkit-justify-content: space-around
+      -ms-flex-pack: distribute
+      justify-content: space-around
+    li
+      margin-right: 0
+  main .about-us .text
+    h2
+      font-size: 1.5em
+    ul.members li
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -webkit-flex-direction: column
+      -ms-flex-direction: column
+      flex-direction: column
+      img
+        width: 100%
+        height: 100%
+      .card
+        margin-left: 0
+        margin-top: 1em
+        width: 100%
+        h3
+          text-align: center
+        p
+          padding: 1em
+          text-align: center
