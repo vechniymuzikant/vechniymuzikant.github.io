@@ -1,8 +1,19 @@
+  
 \:root
   -webkit-box-sizing: border-box
   box-sizing: border-box
   font-size: 1em
   overflow-x: hidden
+
+@mixin main-text
+  font-family: "Roboto"
+  font-style: normal
+  font-weight: normal
+  font-size: 1.5rem
+  line-height: 150%
+  color: #333333
+  width: 100%
+
 
 *, ::after, ::before
   -webkit-box-sizing: inherit
@@ -297,10 +308,69 @@ main
 
 main.support_us
   flex-direction: column
+  align-items: center
   .content
     width: 70vw
-    justify-content: center
-    
+    .text-support-reason
+      padding:
+        top: 4em
+      p
+        @include main-text
+        
+    .block
+      .support-image
+        margin: 1em 0
+        img
+          width: 100%
+          border: 6px solid #028786
+          padding: 2vw
+          transition: all 0.5s
+          &:hover
+            transform: scale(1.01)
+            box-shadow: 0 0 10px rgba(68, 68, 68, 0.3)
+          
+      .text
+        padding: 1em 0
+        p
+          @include main-text
+          span
+            @include main-text
+            position: relative
+            padding: 0.15em
+            color: #028786
+            padding-bottom: .01em
+            border-bottom: 2px solid white
+            transition: all 0.2s
+            
+            &:hover
+              border-bottom: 2px solid #028786
+              cursor: pointer
+      .partners
+        padding: 1em 0
+        p
+          @include main-text
+          a
+            color: #028786
+            padding-bottom: .01em
+            border-bottom: 2px solid white
+            transition: all 0.2s
+            &:hover
+              border-bottom: 2px solid #028786
+      .phone-numbers
+        padding: 1em 0
+        padding-bottom: 4em
+        p
+          @include main-text
+          a
+            color: #028786
+            padding-bottom: .01em
+            border-bottom: 2px solid white
+            transition: all 0.2s
+            &:hover
+              border-bottom: 2px solid #028786
+
+
+
   .title
       width: 100%
       padding:
@@ -469,3 +539,18 @@ nav .content
         p
           padding: 1em
           text-align: center
+  main.support_us
+    p
+      font-size: 1.2rem !important;
+    .content
+      width: 85vw
+      .text-support-reason
+        padding-top: 2em
+      .block
+        .text
+          p
+            span
+              font-size: 1.2rem
+    .title 
+      h1
+        font-size: 1.5rem

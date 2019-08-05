@@ -297,13 +297,106 @@ main.support_us {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   main.support_us .content {
-    width: 70vw;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    width: 70vw; }
+    main.support_us .content .text-support-reason {
+      padding-top: 4em; }
+      main.support_us .content .text-support-reason p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: #333333;
+        width: 100%; }
+    main.support_us .content .block .support-image {
+      margin: 1em 0; }
+      main.support_us .content .block .support-image img {
+        width: 100%;
+        border: 6px solid #028786;
+        padding: 2vw;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+        main.support_us .content .block .support-image img:hover {
+          -webkit-transform: scale(1.01);
+              -ms-transform: scale(1.01);
+                  transform: scale(1.01);
+          -webkit-box-shadow: 0 0 10px rgba(68, 68, 68, 0.3);
+                  box-shadow: 0 0 10px rgba(68, 68, 68, 0.3); }
+    main.support_us .content .block .text {
+      padding: 1em 0; }
+      main.support_us .content .block .text p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: #333333;
+        width: 100%; }
+        main.support_us .content .block .text p span {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.5rem;
+          line-height: 150%;
+          color: #333333;
+          width: 100%;
+          position: relative;
+          padding: 0.15em;
+          color: #028786;
+          padding-bottom: .01em;
+          border-bottom: 2px solid white;
+          -webkit-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          transition: all 0.2s; }
+          main.support_us .content .block .text p span:hover {
+            border-bottom: 2px solid #028786;
+            cursor: pointer; }
+    main.support_us .content .block .partners {
+      padding: 1em 0; }
+      main.support_us .content .block .partners p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: #333333;
+        width: 100%; }
+        main.support_us .content .block .partners p a {
+          color: #028786;
+          padding-bottom: .01em;
+          border-bottom: 2px solid white;
+          -webkit-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          transition: all 0.2s; }
+          main.support_us .content .block .partners p a:hover {
+            border-bottom: 2px solid #028786; }
+    main.support_us .content .block .phone-numbers {
+      padding: 1em 0;
+      padding-bottom: 4em; }
+      main.support_us .content .block .phone-numbers p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: #333333;
+        width: 100%; }
+        main.support_us .content .block .phone-numbers p a {
+          color: #028786;
+          padding-bottom: .01em;
+          border-bottom: 2px solid white;
+          -webkit-transition: all 0.2s;
+          -o-transition: all 0.2s;
+          transition: all 0.2s; }
+          main.support_us .content .block .phone-numbers p a:hover {
+            border-bottom: 2px solid #028786; }
   main.support_us .title {
     width: 100%;
     padding-top: 3em;
@@ -470,4 +563,14 @@ nav .content {
         text-align: center; }
       main .about-us .text ul.members li .card p {
         padding: 1em;
-        text-align: center; } }
+        text-align: center; }
+  main.support_us p {
+    font-size: 1.2rem !important; }
+  main.support_us .content {
+    width: 85vw; }
+    main.support_us .content .text-support-reason {
+      padding-top: 2em; }
+    main.support_us .content .block .text p span {
+      font-size: 1.2rem; }
+  main.support_us .title h1 {
+    font-size: 1.5rem; } }
