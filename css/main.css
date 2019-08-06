@@ -318,7 +318,7 @@ main.support_us {
       margin: 1em 0; }
       main.support_us .content .block .support-image img {
         width: 100%;
-        border: 6px solid #028786;
+        border: 5px solid #028786;
         padding: 2vw;
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
