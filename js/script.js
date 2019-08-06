@@ -21,7 +21,6 @@ window.addEventListener("scroll", function () {
     }
 });
 
-
 const span = document.querySelector("span");
 
 span.onclick = function() {
